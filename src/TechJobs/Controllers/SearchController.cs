@@ -20,7 +20,7 @@ namespace TechJobs.Controllers
 
         public IActionResult Results(string searchType, string searchTerm)
         {
-            ViewBag.columns = ListController.columnChoices;
+            //ViewBag.columns = ListController.columnChoices;
             
             if (searchType.Equals("all"))
             {
@@ -30,7 +30,7 @@ namespace TechJobs.Controllers
             else
             {
                 searchResults = JobData.FindByColumnAndValue(searchType, searchTerm);
-                ViewBag.jobs = searchResults;
+                //ViewBag.jobs = searchResults;
                 
             }
             return Redirect("/Search/Index");
